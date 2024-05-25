@@ -39,5 +39,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_25_112756) do
   end
 
   add_foreign_key "bookmarks", "lists"
-  add_foreign_key "bookmarks", "movies", column: "movie_id"
+  add_foreign_key "bookmarks", "movies"
 end

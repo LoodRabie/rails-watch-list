@@ -1,0 +1,6 @@
+<h1>Which movies do you want to add</h1>
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= movie.title %></li>
+  <% end %>
+</ul>
