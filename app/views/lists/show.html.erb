@@ -1,3 +1,15 @@
 <h2><%= @list.name %></h2>
 
 <%= link_to "Back to my lists", lists_path , class: "btn btn-primary" %>
+
+<h2>Bookmarked Movies</h2>
+  <ul>
+    <% @bookmarks.each do |bookmark| %>
+      <li>
+        <strong>Title:</strong> <%= bookmark.movie.title %> <br>
+        <strong>Overview:</strong> <%= bookmark.movie.overview %> <br>
+        <strong>Comment:</strong> <%= bookmark.comment %> <br>
+        <strong>Poster:</strong> <%= image_tag bookmark.movie.poster_url %> <br>
+      </li>
+    <% end %>
+  </ul>

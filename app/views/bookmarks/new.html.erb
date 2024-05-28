@@ -4,3 +4,11 @@
     <li><%= movie.title %></li>
   <% end %>
 </ul>
+
+<%= form_with(model: [@list, @bookmark]) do |form| %>
+  <%= form.label :movie_id, "Movie" %>
+  <%= form.collection_select :movie_id, @movies, :id, :title, prompt: "Select a Movie"%>
+  <%= form.label :comment %>
+  <%= form.text_field :comment %>
+  <%= form.submit "Create Bookmark" %>
+  <% end %>
